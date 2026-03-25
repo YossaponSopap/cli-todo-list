@@ -21,7 +21,7 @@ A simple and efficient Command Line Interface (CLI) To-Do List application built
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cli-todo-list.git
+git clone https://github.com/YossaponSopap/cli-todo-list
 ```
 
 2. Navigate to the project folder:
