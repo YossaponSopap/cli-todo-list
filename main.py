@@ -11,9 +11,14 @@ tasks = []
 # ฟังก์ชันเพิ่มงาน
 def add_task():
     # รับ input จากผู้ใช้
-    task = input("Enter your task: ")
+    task = input("Enter your task: ").strip()
+    if task == "":
+        print("Task cannot be empty!")
+        return
+    
     # เอา task ไปเก็บใน list
     tasks.append(task)
+    
     # แจ้งว่าทำสำเร็จ
     print("task added successfully.")
 
@@ -40,7 +45,7 @@ def del_task():
             print("Invalid task number.")
 
 # ฟังก์ชันดูรายการงาน
-def view_taskS():
+def view_tasks():
     # ถ้าไม่มี task
     if len(tasks) == 0:
         print("No task!")
@@ -56,17 +61,21 @@ while True:
     print(messageDisplay)
 
     # รับตัวเลือกจากผู้ใช้
-    choice = int(input("Enter your choice: "))
+    try:
+        choice = int(input("Enter your choice: "))
 
-    # ตรวจสอบว่าผู้ใช้เลือกอะไร
-    if choice == 1:
-        add_task()        # เพิ่ม task
-    elif choice == 2:
-        del_task()        # ลบ task
-    elif choice == 3:
-        view_taskS()      # ดู task
-    elif choice == 4:
-        print("Thank you! for using To-Do-List Application")
-        break             # ออกจาก loop = ปิดโปรแกรม
-    else:
-        print("nothing, try again")  # กรณีเลือกผิด
+        # ตรวจสอบว่าผู้ใช้เลือกอะไร
+        if choice == 1:
+            add_task()        # เพิ่ม task
+        elif choice == 2:
+            del_task()        # ลบ task
+        elif choice == 3:
+            view_tasks()      # ดู task
+        elif choice == 4:
+            print("Thank you! for using To-Do-List Application")
+            break             # ออกจาก loop = ปิดโปรแกรม
+        else:
+            print("nothing, try again")  # กรณีเลือกผิด
+
+    except ValueError:
+        print("Please enter a valid number!")
