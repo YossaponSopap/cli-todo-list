@@ -1,6 +1,6 @@
 # 📝 CLI To-Do List Application
 
-A simple and efficient Command Line Interface (CLI) To-Do List application built with Python. This project helps you manage your daily tasks directly from the terminal.
+A simple and efficient Command Line Interface (CLI) To-Do List application built with Python. This project helps you manage your daily tasks directly from the terminal .
 
 
 ## 🚀 Features
